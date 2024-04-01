@@ -18,6 +18,6 @@ vim.keymap.set("x", "<leader>p", "\"_dP")
 
 vim.keymap.set({ "v", "n" }, "<leader>y", "\"*y")
 
-vim.keymap.set("n", "<leader>/", ":Commentary<CR>", { silent = true })
+vim.keymap.set({ "n", "v" }, "<leader>/", ":Commentary<CR>", { silent = true })
 
 -- vim.keymap.set("n", "<C-f>", "<cmd>silent !tmux neww tmux-sessionizer<CR>", { silent = true })
