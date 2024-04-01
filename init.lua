@@ -34,6 +34,7 @@ require("lazy").setup({
 	{'hrsh7th/nvim-cmp'},
 	{'L3MON4D3/LuaSnip'},
   {'lewis6991/gitsigns.nvim'},
+	{'tpope/vim-commentary'},
 	{
 					"kdheepak/lazygit.nvim",
 					cmd = {
