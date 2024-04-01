@@ -3,7 +3,8 @@ vim.opt.guicursor = ""
 vim.opt.nu = true
 vim.opt.relativenumber = true
 
-vim.opt.tabstop = 4
+vim.opt.tabstop = 8
+vim.opt.shiftwidth = 2
 
 vim.opt.smartindent = true
 
