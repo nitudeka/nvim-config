@@ -16,9 +16,7 @@ vim.keymap.set("n", "<c-l>", ":wincmd l<CR>", { silent = true })
 
 vim.keymap.set("x", "<leader>p", "\"_dP")
 
-vim.keymap.set("n", "<leader>y", "\"+y")
-vim.keymap.set("v", "<leader>y", "\"+y")
-vim.keymap.set("n", "<leader>Y", "\"+Y")
+vim.keymap.set({ "v", "n" }, "<leader>y", "\"*y")
 
 vim.keymap.set("n", "<leader>/", ":Commentary<CR>", { silent = true })
 
