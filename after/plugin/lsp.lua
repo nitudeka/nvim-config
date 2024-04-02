@@ -5,11 +5,12 @@ local cmp_select = {behavior = cmp.SelectBehavior.Select}
 lsp_zero.on_attach(function(client, bufnr)
   -- see :help lsp-zero-keybindings
   -- to learn the available actions
+  lsp_zero.buffer_autoformat()
   lsp_zero.default_keymaps({
-	  ['<C-j>'] = cmp.mapping.select_next_item(cmp_select),
-	  ['<C-k>'] = cmp.mapping.select_prev_item(cmp_select),
-	  ['<C-y>'] = cmp.mapping.confirm({ select = true }),
-	  ['<C-Space>'] = cmp.mapping.complete(),
+    ['<C-j>'] = cmp.mapping.select_next_item(cmp_select),
+    ['<C-k>'] = cmp.mapping.select_prev_item(cmp_select),
+    ['<C-y>'] = cmp.mapping.confirm({ select = true }),
+    ['<C-Space>'] = cmp.mapping.complete(),
   })
 end)
 
@@ -18,8 +19,10 @@ end)
 require('mason').setup({})
 require('mason-lspconfig').setup({
   ensure_installed = {
-	  'tsserver',
-	  'rust_analyzer'
+    'tsserver',
+    'rust_analyzer',
+    'gopls',
+    'templ'
   },
   handlers = {
     lsp_zero.default_setup,
