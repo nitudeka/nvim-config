@@ -5,7 +5,7 @@ local cmp_select = {behavior = cmp.SelectBehavior.Select}
 lsp_zero.on_attach(function(client, bufnr)
   -- see :help lsp-zero-keybindings
   -- to learn the available actions
-  lsp_zero.buffer_autoformat()
+  -- lsp_zero.buffer_autoformat()
   lsp_zero.default_keymaps({
     ['<C-j>'] = cmp.mapping.select_next_item(cmp_select),
     ['<C-k>'] = cmp.mapping.select_prev_item(cmp_select),
