@@ -16,6 +16,12 @@ vim.opt.rtp:prepend(lazypath)
 vim.g.mapleader = " " -- Make sure to set `mapleader` before lazy so your mappings are correct
 vim.g.maplocalleader = "\\" -- Same for `maplocalleader`
 
+vim.filetype.add {
+  extension = {
+    templ = "templ",
+  },
+}
+
 require("lazy").setup({
   {
     'nvim-telescope/telescope.nvim', tag = '0.1.6',
