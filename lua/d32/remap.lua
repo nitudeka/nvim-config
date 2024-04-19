@@ -16,7 +16,7 @@ vim.keymap.set("n", "<c-l>", ":wincmd l<CR>", { silent = true })
 
 vim.keymap.set("n", "q", ":q<CR>", { silent = true })
 
-vim.keymap.set("x", "<leader>p", "\"_dP")
+vim.keymap.set("v", "<leader>p", "\"ap")
 
 vim.keymap.set({ "v", "n" }, "<leader>y", "\"*y")
 
