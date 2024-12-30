@@ -22,4 +22,4 @@ vim.keymap.set({ "v", "n" }, "<leader>y", "\"*y")
 
 vim.keymap.set({ "n", "v" }, "<leader>/", ":Commentary<CR>", { silent = true })
 
--- vim.keymap.set("n", "<C-f>", "<cmd>silent !tmux neww tmux-sessionizer<CR>", { silent = true })
+vim.keymap.set("n", "<C-f>", "<cmd>lua vim.lsp.buf.format()<CR>", { noremap = true, silent = true })
