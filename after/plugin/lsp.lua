@@ -16,6 +16,20 @@ lsp_zero.on_attach(function(client, bufnr)
   })
 end)
 
+lsp_zero.configure("tsserver", {
+  on_attach = function(client, bufnr)
+    local opts = { buffer = bufnr, remap = false }
+    vim.keymap.set("n", "gd", vim.lsp.buf.definition, opts)
+    vim.keymap.set("n", "K", vim.lsp.buf.hover, opts)
+  end,
+})
+
+lsp_zero.configure("volar", {
+  filetypes = { "vue" },
+})
+
+lsp_zero.setup()
+
 -- to learn how to use mason.nvim with lsp-zero
 -- read this: https://github.com/VonHeikemen/lsp-zero.nvim/blob/v3.x/doc/md/guide/integrate-with-mason-nvim.md
 require('mason').setup({})
@@ -24,6 +38,7 @@ require('mason-lspconfig').setup({
     'tsserver',
     'rust_analyzer',
     'gopls',
+    'volar',
     'templ'
   },
   handlers = {

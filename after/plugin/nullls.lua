@@ -9,15 +9,15 @@ null_ls.setup({
             extra_args = { "--tab-width", "2" },
         }),
     },
-    on_attach = function(client, bufnr)
-        if client.server_capabilities.documentFormattingProvider then
-            vim.api.nvim_create_autocmd("BufWritePre", {
-                group = vim.api.nvim_create_augroup("FormatOnSave", { clear = true }),
-                buffer = bufnr,
-                callback = function()
-                    vim.lsp.buf.format({ bufnr = bufnr })
-                end,
-            })
-        end
-    end,
+    -- on_attach = function(client, bufnr)
+     --    if client.server_capabilities.documentFormattingProvider then
+        --     vim.api.nvim_create_autocmd("BufWritePre", {
+           --      group = vim.api.nvim_create_augroup("FormatOnSave", { clear = true }),
+              --   buffer = bufnr,
+           --      callback = function()
+              --       vim.lsp.buf.format({ bufnr = bufnr })
+     --            end,
+        --     })
+      --   end
+  --   end,
 })
