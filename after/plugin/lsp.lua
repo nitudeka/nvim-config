@@ -22,10 +22,16 @@ lsp_zero.configure("tsserver", {
     vim.keymap.set("n", "gd", vim.lsp.buf.definition, opts)
     vim.keymap.set("n", "K", vim.lsp.buf.hover, opts)
   end,
+  filetypes = { "typescript", "javascript", "javascriptreact", "typescriptreact" } -- No 'vue' here
 })
 
 lsp_zero.configure("volar", {
-  filetypes = { "vue" },
+  filetypes = { "vue", "typescript", "javascript" }, -- Volar handles TS inside Vue
+  init_options = {
+    typescript = {
+      tsdk = vim.fn.stdpath("data") .. "/mason/packages/typescript-language-server/node_modules/typescript/lib"
+    }
+  }
 })
 
 lsp_zero.setup()
