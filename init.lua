@@ -41,7 +41,7 @@ require("lazy").setup({
   {'lewis6991/gitsigns.nvim'},
   {'tpope/vim-commentary'},
   {'nvim-lua/plenary.nvim'},
-  {'jose-elias-alvarez/null-ls.nvim'},
+  {'nvimtools/none-ls.nvim'},
   {
     "kdheepak/lazygit.nvim",
     cmd = {
