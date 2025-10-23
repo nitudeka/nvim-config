@@ -29,6 +29,12 @@ require("lazy").setup({
   },
   { 'rose-pine/neovim', name = 'rose-pine' },
   {'nvim-treesitter/nvim-treesitter', build = ':TSUpdate'},
+  {
+    "supermaven-inc/supermaven-nvim",
+    config = function()
+      require("supermaven-nvim").setup({})
+    end,
+  },
   {'ThePrimeagen/harpoon'},
   {'mbbill/undotree'},
   {'williamboman/mason.nvim'},
